@@ -15,15 +15,10 @@ Mitchell Bricco
 Alex Ceithamer
 Jordyn Henrich
 Keith Thoong
-Tyler Kamholz
 Samuel Ayoade
 Tyler Kamholz
 Danial Moczynski
 Quinton Phalin
-Kaia Thern
 Keerthana Ambati
 Michael Meisenburg
 Matthew Bertello
-Joshua Hill
-Evan Olson
-

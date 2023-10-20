@@ -61,11 +61,15 @@
 	<ItemGroup>
 	  <None Remove="Model\" />
 	  <None Remove="Resources\Images\trash.png" />
+	  <None Remove="AirportPassportProgram\Properties\launchSettings.json" />
+	  <None Remove="AirportPassportProgram\Resources\Images\trash.png" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="Model\" />
 	</ItemGroup>
 	<ItemGroup>
 	  <BundleResource Include="Resources\Images\trash.png" />
+	  <BundleResource Include="AirportPassportProgram\Properties\launchSettings.json" />
+	  <BundleResource Include="AirportPassportProgram\Resources\Images\trash.png" />
 	</ItemGroup>
 </Project>
