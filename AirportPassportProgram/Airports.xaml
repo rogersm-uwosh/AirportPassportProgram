@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:model="clr-namespace:AirportPassportProgram.Model"
+             x:DataType="model:BusinessLogic" 
+             x:Class="AirportPassportProgram.AirportsPage">
+
+    <ScrollView>
+       <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Start">
+
+            <Label HorizontalTextAlignment="Start" Text="Airports" FontSize="Large"/>
+
+            <!-- This line says that the ItemsSource of the CollectionView is the Airports property of the Domain object (an ObservableCollection) -->
+            <CollectionView x:Name="CV" ItemsSource="{Binding Airports}" SelectionMode="Single">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="model:Airport">
+                        <Grid RowDefinitions="*" ColumnDefinitions="*,2*,2*, 2*">
+                            <Label Grid.Column="0" Text="{Binding Id}" VerticalTextAlignment="Center"/>
+                            <Label Grid.Column="1" Text="{Binding City}" VerticalTextAlignment="Center"/>
+                            <Label Grid.Column="2" Text="{Binding DateVisited}" VerticalTextAlignment="Center"/>
+                            <Label Grid.Column="3" Text="{Binding Rating}" VerticalTextAlignment="Center" />
+                            <Button Grid.Column="4" BackgroundColor="Transparent"  Clicked="DeleteAirport_Clicked"  ImageSource="trash.png" />
+                        </Grid>
+                    </DataTemplate>
+
+                </CollectionView.ItemTemplate>
+
+            </CollectionView>
+            <Grid RowDefinitions="*" ColumnDefinitions="*,3*,2*,*">
+                <Entry Grid.Column="0" Text="KATW" Placeholder="Id" x:Name="IdENT"/>
+                <Entry Grid.Column="1" Text="Appleton" Placeholder="City" x:Name="CityENT"/>
+                <Entry Grid.Column="2" Text="03/03/2023" Placeholder="Date Visited" x:Name="DateVisitedENT"/>
+                <Entry Grid.Column="3" Text="3" Placeholder="Rating" x:Name="RatingENT"/>
+            </Grid>
+            <Button TextColor="White" Text="Add Airport" Clicked="AddAirport_Clicked"/>
+            <Button TextColor="White" Text="Edit Airport" Clicked="EditAirport_Clicked"/>
+            <Button TextColor="White" Text="Calculate Statistics" Clicked="CalculateStatistics_Clicked"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+    </ScrollView>
+
+</ContentPage>
